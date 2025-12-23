@@ -2,6 +2,8 @@ import { Geist, Geist_Mono, Montserrat } from "next/font/google"; // Можно 
 import "./globals.scss";
 import Navbar from "@/widgets/navbar/Navbar.jsx";
 import Footer from "@/widgets/footer/Footer.jsx";
+import "aos/dist/aos.css";
+import AOS from "aos";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
