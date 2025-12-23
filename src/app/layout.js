@@ -1,7 +1,6 @@
-import { Geist, Geist_Mono, Montserrat } from "next/font/google"; // Можно объединить импорты
+import { Geist, Geist_Mono, Montserrat } from "next/font/google";
 import "./globals.scss";
-import Navbar from "@/widgets/navbar/Navbar.jsx";
-import Footer from "@/widgets/footer/Footer.jsx";
+import Navbar from "@/widgets/navbar/Navbar";
 import "aos/dist/aos.css";
 import AOS from "aos";
 
@@ -31,10 +30,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased`}
+        className={`${geistSans.variable} ${montserrat.variable} ${geistMono.variable} antialiased`}
       >
         <Navbar />
-        {children}
+
+        <main style={{ paddingTop: "80px" }}>{children}</main>
+
         {/* <Footer /> */}
       </body>
     </html>
