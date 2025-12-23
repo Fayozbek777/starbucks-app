@@ -1,0 +1,249 @@
+.cook-section {
+  position: relative;
+  padding: 160px 0 140px;
+  background: var(--color-bg, #121517);
+  overflow: hidden;
+  color: white;
+}
+
+.container {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.cook-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.cook-left {
+  position: relative;
+}
+
+.cook-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 680px;
+  min-height: 500px;
+  overflow: hidden;
+  border-radius: 32px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.cook-main-img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.discount-badge {
+  position: absolute;
+  bottom: -60px;
+  left: -40px;
+  z-index: 3;
+  transform: rotate(-18deg);
+  width: 280px;
+  height: 280px;
+  transition: transform 0.6s ease;
+
+  &:hover {
+    transform: rotate(-8deg) scale(1.08);
+  }
+}
+
+.discount-img {
+  filter: drop-shadow(0 16px 40px rgba(35, 114, 73, 0.5));
+}
+
+.lines-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.cook-lines {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.25;
+}
+.cook-right {
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+  font-family: "Montserrat", system-ui, sans-serif;
+  font-weight: 800;
+  font-size: clamp(3.5rem, 7vw, 5.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  margin-bottom: 1.5rem;
+
+  .highlight {
+    background: linear-gradient(267deg, #237249 0%, #35c66b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+.description {
+  font-family: "Montserrat", system-ui, sans-serif;
+  font-weight: 400;
+  font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+  line-height: 1.6;
+  color: #d9d9d9;
+  max-width: 520px;
+  margin-bottom: 2.5rem;
+}
+
+.btn {
+  font-family: "Montserrat", system-ui, sans-serif;
+  font-weight: 600;
+  position: absolute;
+  top: 415px;
+  left: 10px;
+  font-size: 1.4rem;
+  padding: 20px 50px;
+  background: linear-gradient(265deg, #237249 0%, #35c66b 100%);
+  border: none;
+  border-radius: 60px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(53, 198, 107, 0.35);
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(53, 198, 107, 0.5);
+  }
+}
+
+.mini-image {
+  margin-top: 40px;
+  width: 280px;
+  height: 180px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+
+  .mini-img {
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 1100px) {
+  .cook-content {
+    grid-template-columns: 1fr;
+    gap: 100px;
+  }
+
+  .cook-image-wrapper {
+    height: 580px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cook-section {
+    padding: 120px 0 100px;
+  }
+
+  .cook-image-wrapper {
+    height: 480px;
+  }
+
+  .discount-badge {
+    bottom: -40px;
+    left: -30px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .title {
+    font-size: clamp(2.8rem, 9vw, 4.2rem);
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 360px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cook-image-wrapper {
+    height: 420px;
+  }
+
+  .discount-badge {
+    width: 160px;
+    height: 160px;
+  }
+
+  .mini-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+  }
+
+  .btn {
+    left: 0;
+    top: 445px;
+  }
+}
+.video-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  backdrop-filter: blur(8px);
+}
+
+.video-modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.6);
+}
+
+.modal-close {
+  position: absolute;
+  top: -10px;
+  right: 0;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 3rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: rotate(90deg) scale(1.2);
+  }
+}
+
+@media (max-width: 768px) {
+  .video-modal-content {
+    max-width: 100%;
+  }
+
+  .modal-close {
+    top: -10px;
+    font-size: 2.5rem;
+  }
+}
