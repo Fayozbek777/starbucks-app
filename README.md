@@ -1,37 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+☕ Starbucks — Профессиональный Landing Page
 
-## Getting Started
+Мощный и современный проект Starbucks, созданный на Next.js 14 с поддержкой Redux Toolkit + RTK Query, подключённым Dummy JSON API, а также полноценной Admin Panel для управления данными.
+Красивые анимации, правильная архитектура (FSD), высокая производительность и продакшен-качество — всё как надо 😎🚀
 
-First, run the development server:
+⭐ Основные возможности
 
-```bash
+✨ Next.js 14 (App Router) — быстрый, SEO-френдли, современный стек
+🔥 Redux Toolkit + RTK Query — управление состоянием + запросы к API
+🔌 Dummy JSON API — тестовые реальные данные для разработки
+🧑‍💻 Admin Panel — управление контентом и данными
+🏗 FSD (Feature-Sliced Design) — масштабируемая архитектура
+🎨 SCSS — мощный и гибкий стиль
+🎥 AOS + Framer Motion — плавные анимации
+📱 Full Responsive — корректная работа на всех устройствах
+⚡ Высокая оптимизация и стабильность
+
+🛠 Используемый стек
+
+Next.js 14
+
+Redux Toolkit
+
+RTK Query
+
+Dummy JSON API
+
+Admin Panel
+
+SCSS
+
+AOS
+
+Framer Motion
+
+Feature-Sliced Design
+
+📂 Архитектура (FSD)
+src/
+ ├─ app/
+ ├─ shared/
+ ├─ entities/
+ ├─ features/
+ ├─ widgets/
+ ├─ pages/
+ ├─ processes/
+ └─ styles/
+
+🚀 Установка и запуск проекта
+1️⃣ Установка зависимостей
+npm install
+
+2️⃣ Запуск Dev версии
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3️⃣ Билд и продакшен
+npm run build
+npm start
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+🧑‍💼 Admin Panel
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Админ-панель позволяет:
+✔ управлять контентом
+✔ редактировать данные
+✔ работать с Dummy API
+✔ тестировать функционал как в реальном проекте
 
-## Learn More
+❤️ Автор
 
-To learn more about Next.js, take a look at the following resources:
+Проект создан разработчиком, который любит чистый код, мощный UI и вкусный Starbucks ☕🔥
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# starbucks-app
+Если нужно — сделаю:
+🌍 английскую версию
+📦 версию для HR
+🖼️ добавлю скриншоты
+📜 лицензию
+🚀 гайд по деплою на Vercel
