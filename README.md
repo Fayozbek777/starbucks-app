@@ -38,12 +38,8 @@ Feature-Sliced Design
 📂 Архитектура (FSD)
 src/
  ├─ app/
- ├─ shared/
- ├─ entities/
  ├─ features/
  ├─ widgets/
- ├─ pages/
- ├─ processes/
  └─ styles/
 
 🚀 Установка и запуск проекта
