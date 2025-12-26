@@ -3,11 +3,11 @@ import Cook from "@/widgets/cookvideo/Cook";
 import Event from "@/widgets/evenets/Event";
 import FakePro from "@/widgets/fakeProducts/FakePro";
 import Intro from "@/widgets/intro/Intro";
-import React from "react";
+import AOS from "aos";
 
-const page = () => {
+export default function Home() {
   return (
-    <div>
+    <div className="home-page">
       <Intro />
       <Benefit />
       <Cook />
@@ -15,6 +15,4 @@ const page = () => {
       <Event />
     </div>
   );
-};
-
-export default page;
+}
