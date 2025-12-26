@@ -8,6 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
 import "./FakePro.scss";
+import { useRouter } from "next/navigation";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 60, scale: 0.92 },
@@ -23,6 +24,8 @@ const cardVariants = {
 };
 
 export default function FakePro() {
+  const router = useRouter();
+
   const products = [
     {
       image: "/images/coffe-image1.png",
@@ -121,7 +124,12 @@ export default function FakePro() {
                   <h4 className="volume">{product.volume}</h4>
                 </div>
 
-                <button className="buy-btn">Buy Product</button>
+                <button
+                  className="buy-btn"
+                  onClick={() => router.push("/login")}
+                >
+                  Buy Product
+                </button>
               </motion.div>
             </SwiperSlide>
           ))}
