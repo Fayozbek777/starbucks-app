@@ -77,6 +77,8 @@
     background: transparent;
     border: 2px solid #444;
     color: #d9d9d9;
+    position: absolute;
+    left: 305px;
 
     &:hover {
       background: rgba(255, 255, 255, 0.08);
@@ -89,6 +91,9 @@
 .stats {
   display: flex;
   flex-wrap: wrap;
+  position: relative;
+  top: 85px;
+  left: 15px;
   gap: 50px 80px;
 }
 
@@ -151,6 +156,30 @@
 }
 
 @media (max-width: 1100px) {
+  .buttons {
+    position: relative;
+    bottom: 345px;
+  }
+
+  .btn.primary {
+    position: relative;
+    top: 330px;
+    left: 45px;
+  }
+  .btn.secondary {
+    position: relative;
+    top: 330px;
+    left: 45px;
+  }
+
+  .intro-right {
+    position: relative;
+    top: 25px;
+  }
+  .stats {
+    position: relative;
+    top: 0;
+  }
   .intro-content {
     grid-template-columns: 1fr;
     gap: 80px;
@@ -166,6 +195,30 @@
 }
 
 @media (max-width: 768px) {
+  .buttons {
+    position: relative;
+    bottom: 345px;
+  }
+
+  .btn.primary {
+    position: relative;
+    top: 330px;
+    left: 45px;
+  }
+  .btn.secondary {
+    position: relative;
+    top: 330px;
+    left: 45px;
+  }
+
+  .intro-right {
+    position: relative;
+    top: 25px;
+  }
+  .stats {
+    position: relative;
+    top: 0;
+  }
   .intro-section {
     padding: 120px 0 80px;
   }
@@ -183,6 +236,30 @@
 }
 
 @media (max-width: 480px) {
+  .buttons {
+    position: relative;
+    bottom: 345px;
+  }
+
+  .btn.primary {
+    position: relative;
+    top: 330px;
+    left: 45px;
+  }
+  .btn.secondary {
+    position: relative;
+    top: 330px;
+    left: 45px;
+  }
+
+  .intro-right {
+    position: relative;
+    top: 25px;
+  }
+  .stats {
+    position: relative;
+    top: 0;
+  }
   .stat-value {
     font-size: 2.8rem;
   }
