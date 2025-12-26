@@ -1,0 +1,129 @@
+.event-section {
+  background: var(--color-bg, #121517);
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.event-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.title {
+  font-family: "Montserrat", system-ui, sans-serif;
+  font-weight: 800;
+  font-size: clamp(3.5rem, 7vw, 5.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  color: white;
+  margin-bottom: 1rem;
+
+  .highlight {
+    background: linear-gradient(267deg, #237249 0%, #35c66b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.description {
+  font-family: "Montserrat", system-ui, sans-serif;
+  font-weight: 400;
+  font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+  line-height: 1.6;
+  color: #d9d9d9;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.event-card {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  transition: all 0.4s ease;
+  will-change: transform; /* оптимизация для Framer Motion */
+}
+
+.event-image {
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.event-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.4) 40%,
+    transparent 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 40px 30px;
+  opacity: 0.85;
+  transition: opacity 0.4s ease;
+}
+
+.event-title {
+  font-family: "Montserrat", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: white;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.event-btn {
+  align-self: flex-start;
+  padding: 14px 32px;
+  background: linear-gradient(90deg, #237249 0%, #35c66b 100%);
+  border: none;
+  border-radius: 50px;
+  font-family: "Montserrat", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(53, 198, 107, 0.4);
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(53, 198, 107, 0.6);
+  }
+}
+
+@media (max-width: 1100px) {
+  .events-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .events-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .event-overlay {
+    padding: 30px 20px;
+  }
+}
