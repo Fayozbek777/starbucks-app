@@ -3,11 +3,24 @@
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
+import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
-
 import "./FakePro.scss";
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 60, scale: 0.92 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.7,
+      ease: "easeOut",
+    },
+  },
+};
 
 export default function FakePro() {
   const products = [
@@ -44,8 +57,13 @@ export default function FakePro() {
   return (
     <section className="fakepro-section">
       <div className="container">
-        {/* Заголовок + описание */}
-        <div className="header-box">
+        <motion.div
+          className="header-box"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.9, ease: "easeOut" }}
+        >
           <h1 className="title">
             New Our <span className="highlight">Products</span>
           </h1>
@@ -54,13 +72,11 @@ export default function FakePro() {
             Have time to buy the most harmonious drinks in the new Starbucks
             coffee and don't forget about the discount!
           </p>
-        </div>
-
-        {/* Слайдер продуктов */}
+        </motion.div>
         <Swiper
           modules={[Autoplay, Navigation]}
           spaceBetween={30}
-          slidesPerView={1} // на мобильных 1
+          slidesPerView={1}
           breakpoints={{
             640: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
@@ -78,7 +94,15 @@ export default function FakePro() {
         >
           {products.map((product, index) => (
             <SwiperSlide key={index}>
-              <div className="product-card">
+              <motion.div
+                className="product-card"
+                variants={cardVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ delay: index * 0.15 }}
+                whileHover={{ scale: 1.04, y: -12 }}
+              >
                 <div className="img-box">
                   <Image
                     src={product.image}
@@ -98,10 +122,12 @@ export default function FakePro() {
                 </div>
 
                 <button className="buy-btn">Buy Product</button>
-              </div>
+              </motion.div>
             </SwiperSlide>
           ))}
         </Swiper>
+
+        {/* Кастомные стрелки */}
         <div className="custom-navigation">
           <button className="swiper-button-prev custom-arrow">
             <span>←</span>
