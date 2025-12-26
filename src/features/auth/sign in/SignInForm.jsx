@@ -17,11 +17,8 @@ export default function SignUpForm() {
     e.preventDefault();
     setError("");
     setLoading(true);
-
-    // Имитация регистрации (dummyjson не поддерживает)
     setTimeout(() => {
       if (username && email && password) {
-        // Сохраняем "нового" пользователя
         localStorage.setItem("token", "fake-token-for-demo");
         localStorage.setItem("user", JSON.stringify({ username, email }));
         router.push("/");
@@ -29,7 +26,7 @@ export default function SignUpForm() {
         setError("Заполните все поля");
       }
       setLoading(false);
-    }, 1500);
+    }, 1400);
   };
 
   return (

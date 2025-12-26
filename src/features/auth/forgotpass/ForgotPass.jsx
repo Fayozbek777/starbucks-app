@@ -12,8 +12,6 @@ export default function ForgotPass() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-
-    // Имитация отправки (можно заменить на реальный API)
     setTimeout(() => {
       setMessage(`Ссылка для сброса отправлена на ${email}`);
       setLoading(false);
